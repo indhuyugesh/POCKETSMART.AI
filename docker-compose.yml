@@ -1,0 +1,10 @@
+services:
+  pocketsmart:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./static/uploads:/app/static/uploads
+      - ./pocketsmart.db:/app/pocketsmart.db
